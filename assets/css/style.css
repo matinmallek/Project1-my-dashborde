@@ -1,0 +1,614 @@
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+:root {
+    --transition-fast: 0.25s ease;
+    --transition-med:  0.4s ease;
+    --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --shadow-hover:    0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+body {
+    font-family: Vazirmatn FD;
+    overflow-x: hidden;
+}
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+.sidebar-anim {
+    animation: slideInRight 0.6s var(--transition-slow) both;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.brand-hover { transition: var(--transition-med); }
+.brand-hover:hover { transform: translateX(-6px); }
+
+.brand-icon { transition: var(--transition-med); }
+.brand-hover:hover .brand-icon {
+    transform: rotate(-12deg) scale(1.15);
+    color: #0dcaf0 !important;
+}
+
+/* Nav links */
+.nav-anim {
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.nav-anim::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 3px;
+    height: 60%;
+    background: #0dcaf0;
+    border-radius: 4px;
+    transition: var(--transition-fast);
+}
+
+.nav-anim:hover::before { transform: translateY(-50%) scaleY(1); }
+
+.nav-anim:hover {
+    padding-right: 14px;
+    background-color: rgba(13, 202, 240, 0.08);
+}
+
+/* =========================================================
+   SEARCH + BUTTONS
+   ========================================================= */
+.search_box { width: 400px !important; }
+
+.btn-glow { transition: var(--transition-med); }
+
+.btn-glow:hover {
+    box-shadow: 0 0 0 4px rgba(13, 202, 240, 0.25);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   PROFILE MENU
+   ========================================================= */
+.prof_them { 
+    padding-top: 0 !important; 
+}
+
+
+.profile-btn { transition: var(--transition-med); }
+
+.profile-btn:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 8px rgba(13, 202, 240, 0.5));
+}
+
+.profile-menu {
+    animation: fadeScale 0.35s var(--transition-slow) both;
+    transform-origin: top left;
+}
+
+@keyframes fadeScale {
+    from { opacity: 0; transform: scale(0.85) translateY(-8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.profile-avatar {
+    transition: var(--transition-med);
+}
+
+.profile-avatar:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 0 4px rgba(13, 202, 240, 0.3);
+}
+
+.profile-link {
+    transition: var(--transition-fast);
+    border-radius: 6px;
+}
+
+.profile-link:hover {
+    background-color: rgba(13, 202, 240, 0.1);
+    padding-right: 14px;
+}
+
+.profile-link i { transition: var(--transition-fast); }
+.profile-link:hover i { transform: scale(1.2); color: #0dcaf0; }
+
+.close_btn        { width: 100% !important; }
+.close_btn_box    { width: 89% !important; }
+
+/* ===== STAT CARD ===== */
+.stat-card {
+    transition: var(--transition-med);
+    overflow: hidden;
+    position: relative;
+    min-height: 140px; /* ارتفاع ثابت تا آیکون جا شود */
+}
+
+.stat-card .card-body {
+    padding-left: 90px !important; /* فضای امن برای آیکون سمت چپ/راست */
+    padding-right: 1rem !important;
+    position: relative;
+}
+
+/* آیکون بزرگ تزئینی گوشه کارت */
+.stat-icon-wrap {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    line-height: 1;
+    opacity: 0.35;
+    pointer-events: none;
+    transition: var(--transition-med);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card:hover .stat-icon-wrap {
+    transform: translateY(-50%) rotate(-12deg) scale(1.15);
+    opacity: 0.55;
+}
+
+/* اعداد و متن هرگز زیر آیکون نروند */
+.stat-card .counter {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   CARD FOOTERS
+   ========================================================= */
+.card-footer {
+    transition: var(--transition-med);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-footer:hover {
+    background-color: rgba(var(--bs-dark-rgb), 0.18);
+}
+
+.card-footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: #0dcaf0;
+    transition: right 0.4s ease;
+}
+
+.card-footer:hover::before { right: 0; }
+
+.arrow-anim { transition: var(--transition-fast); }
+.card-footer:hover .arrow-anim { transform: translateX(-6px); }
+
+/* =========================================================
+   CARDS GENERAL
+   ========================================================= */
+.card-anim {
+    transition: var(--transition-med);
+}
+
+.card-anim:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.view-all { transition: var(--transition-fast); }
+.view-all:hover { transform: translateX(-4px); }
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+.table-hover-anim tbody tr {
+    transition: var(--transition-fast);
+}
+
+.table-hover-anim tbody tr:hover {
+    background-color: rgba(13, 202, 240, 0.06);
+    transform: scale(1.005);
+}
+
+.avatar-hover {
+    transition: var(--transition-med);
+}
+
+.avatar-hover:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px rgba(13, 202, 240, 0.4);
+    z-index: 2;
+    position: relative;
+}
+
+.badge-anim {
+    transition: var(--transition-fast);
+    display: inline-block;
+}
+
+.badge-anim:hover {
+    transform: scale(1.1);
+    letter-spacing: 0.5px;
+}
+
+/* Avatar stack */
+.avatar-stack {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-stack img {
+    border-radius: 50%;
+    border: 3px solid var(--bs-body-bg);
+    margin-right: -10px;
+    transition: var(--transition-med);
+    cursor: pointer;
+    position: relative;
+}
+
+.avatar-stack img:first-child { margin-right: 0; }
+
+.avatar-stack img:hover {
+    transform: translateY(-6px) scale(1.15);
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* =========================================================
+   ACTIVITY LIST
+   ========================================================= */
+.icon-list {
+    width: 32px;
+    height: 32px;
+    transition: var(--transition-med);
+}
+
+.activity-item { transition: var(--transition-fast); }
+
+.activity-item:hover .icon-list {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 0 0 4px rgba(13, 202, 240, 0.15);
+}
+
+.activity-item:hover { transform: translateX(-4px); }
+
+.icon-pulse {
+    animation: softPulse 2.5s infinite;
+}
+
+@keyframes softPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(13, 202, 240, 0); }
+    50%      { box-shadow: 0 0 0 6px rgba(13, 202, 240, 0.15); }
+}
+
+.list-activ li:not(:last-child) > span::after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(129, 129, 255, 0.7), transparent);
+    position: absolute;
+    top: 100%;
+}
+
+.smaller { font-size: 0.7em; }
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+.skill-row { transition: var(--transition-fast); }
+
+.skill-row:hover { background-color: rgba(13, 202, 240, 0.05); }
+
+.skill-icon { transition: var(--transition-med); }
+
+.skill-row:hover .skill-icon {
+    transform: rotate(-10deg) scale(1.15);
+}
+
+.progress {
+    height: 22px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   TASK SECTION (NEW)
+   ========================================================= */
+.task-item {
+    transition: var(--transition-fast);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.task-item:hover {
+    background-color: rgba(13, 202, 240, 0.06);
+    transform: translateX(-6px);
+}
+
+.task-check {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition-med);
+    flex-shrink: 0;
+}
+
+.task-item:hover .task-check {
+    transform: rotate(-12deg) scale(1.15);
+    box-shadow: 0 0 0 5px rgba(13, 202, 240, 0.12);
+}
+
+.task-badge {
+    transition: var(--transition-fast);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+}
+
+.task-item:hover .task-badge {
+    transform: scale(1.08);
+    letter-spacing: 0.4px;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+.reveal-init {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-init.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.dashboard-footer {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(13, 202, 240, 0.25);
+    background: rgba(13, 202, 240, 0.03);
+    border-radius: 12px 12px 0 0;
+    transition: var(--transition-med);
+}
+
+.dashboard-footer:hover {
+    background: rgba(13, 202, 240, 0.06);
+    border-top-color: rgba(13, 202, 240, 0.5);
+}
+
+.footer-icon {
+    transition: var(--transition-med);
+}
+
+.dashboard-footer:hover .footer-icon {
+    transform: rotate(-12deg) scale(1.15);
+}
+
+.footer-link {
+    color: var(--bs-secondary-color);
+    font-size: 0.9rem;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #0dcaf0;
+    transition: width var(--transition-med);
+}
+
+.footer-link:hover {
+    color: #0dcaf0;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* آیکون‌های شبکه اجتماعی */
+.footer-social {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-secondary-color);
+    background: rgba(13, 202, 240, 0.08);
+    text-decoration: none;
+    transition: var(--transition-med);
+}
+
+.footer-social:hover {
+    color: #fff;
+    background: #0dcaf0;
+    transform: translateY(-4px) rotate(8deg);
+    box-shadow: 0 6px 14px rgba(13, 202, 240, 0.4);
+}
+
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
+@media (max-width: 992px) {
+    .search_box { width: 100% !important; }
+}
+
+@media (max-width: 576px) {
+    .stat-card:hover { transform: translateY(-4px) scale(1.01); }
+}
+
+/* =========================================================
+   FAUX BOLD FIX — بولد مصنوعی تمیز بدون فایل Bold
+   ========================================================= */
+
+/* جلوگیری از بولد زشت مرورگر */
+body, h1, h2, h3, h4, h5, h6,
+.fw-bold, .fw-bolder, .fw-semibold,
+strong, b, th, .card-title, .counter {
+    font-synthesis: none;
+}
+
+/* بولد مصنوعی با استروک نازک */
+.fw-semibold,
+.card-title,
+.skill-row .fw-bold {
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0.2px currentColor;
+}
+
+.fw-bold,
+strong,
+th,
+.profile-menu .fw-bold,
+.task-item .fw-semibold {
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0.35px currentColor;
+}
+
+.fw-bolder,
+.counter,
+.accordion-button {
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0.5px currentColor;
+}
+
+/* تیترهای بزرگ‌تر */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0.4px currentColor;
+}
+
+/* ========== TECH STACK ICONS ========== */
+.tech-stack {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.tech-stack img {
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+.tech-stack img:hover {
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* ========== THEME TOGGLE SWITCH ========== */
+#theme-toggle-button {
+  font-size: 8px;
+  position: relative;
+  display: inline-block;
+  width: 7em;
+  cursor: pointer;
+}
+
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+
+/* ========== TECH STACK ICONS ========== */
+.tech-stack {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.tech-stack img {
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+.tech-stack img:hover {
+    transform: translateY(-3px) scale(1.15);
+}
+
+/* ========== RESPONSIVE THEME TOGGLE ========== */
+@media (max-width: 768px) {
+    #theme-toggle-button {
+        font-size: 12px;
+        width: 5em;
+    }
+}

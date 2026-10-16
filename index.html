@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matin Malek | داشبورد</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Farsi-Digits/Vazirmatn-FD-font-face.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous" defer></script>
+</head>
+
+<body data-bs-theme="dark">
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- ================= SIDEBAR (Desktop) ================= -->
+        <aside class="col-2 shadow vh-100 d-none d-lg-block sidebar-anim">
+            <div class="border-bottom border-1">
+                <a href="#" class="text-decoration-none d-flex align-items-center brand-hover">
+                    <i class="bi bi-code-slash text-info fs-1 m-2 d-inline-block brand-icon"></i>
+                    <span class="fs-5 fw-bold">متین ملک</span>
+                </a>
+            </div>
+
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-0 active nav-anim"> داشبورد</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-anim"> پروژه‌ها</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-anim">مهارت‌ها</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-anim">برنامه کاری</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-anim">وظایف</a>
+                </li>
+                <li>
+                    <div class="accordion text-primary accordion-flush" id="accordionSidebar">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button text-primary fw-normal collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#accordion-in-nav"
+                                    aria-expanded="false">
+                                    صفحات
+                                </button>
+                            </h2>
+                            <div id="accordion-in-nav" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionSidebar">
+                                <ul class="small text-info">
+                                    <li class="nav-item li_accordion"><a class="nav-link" href="#">درباره من</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">تماس</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">رزومه</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link nav-anim">تنظیمات</a></li>
+            </ul>
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+        <main class="col-12 col-lg-10">
+
+            <!-- ============ HEADER ============ -->
+            <div class="mx-2 mx-lg-3">
+                <div class="row py-2 align-items-center border-bottom border-opacity-50 border-primary">
+
+                    <div class="col-5">
+                        <nav class="navbar d-none d-lg-block bg-body-tertiary">
+                            <div class="container-fluid">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-1 search_box" type="search"
+                                        placeholder="جست‌وجو کنید..." aria-label="Search">
+                                    <button class="btn btn-outline-info px-4 btn-glow" type="submit">جست‌وجو</button>
+                                </form>
+                            </div>
+                        </nav>
+
+                        <button class="btn d-lg-none d-block" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDashboard">
+                            <i class="bi bi-list fs-3"></i>
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" id="offcanvasDashboard">
+                            <div class="p-2">
+                                <div class="border-bottom border-1">
+                                    <a href="#" class="text-decoration-none d-flex align-items-center brand-hover">
+                                        <i class="bi bi-code-slash text-info fs-1 m-2 brand-icon"></i>
+                                        <span class="fs-5 fw-bold">متین ملک</span>
+                                    </a>
+                                </div>
+
+                                <ul class="nav flex-column nav-pills">
+                                    <li class="nav-item"><a href="#" class="nav-link m-0 active"> داشبورد</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">پروژه‌ها</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">مهارت‌ها</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">برنامه کاری</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">وظایف</a></li>
+                                    <li>
+                                        <div class="accordion text-primary accordion-flush" id="accordionMobile">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button text-primary fw-normal collapsed"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#accordion-mobile-nav">
+                                                        صفحات
+                                                    </button>
+                                                </h2>
+                                                <div id="accordion-mobile-nav" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionMobile">
+                                                    <ul class="small text-info">
+                                                        <li class="nav-item"><a class="nav-link" href="#">درباره من</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">تماس</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="#">رزومه</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col py-0 prof_them d-flex justify-content-end align-items-baseline">
+
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-glow" type="button"
+                                data-bs-toggle="dropdown">
+                                تغییر تم
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button class="dropdown-item light_btn" type="button">
+                                        <i class="bi bi-brightness-high"></i>
+                                        <span>روشن</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item dark_btn active" type="button">
+                                        <i class="bi bi-moon"></i>
+                                        <span>تاریک</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn border-0 py-0 profile-btn" data-bs-toggle="dropdown">
+                                <img src="assets/imgs/file_000000005f608230a854db2e1bb0a853.png" class="rounded-circle img-thumbnail"
+                                    width="50" height="50" alt="profile">
+                            </button>
+                            <div class="dropdown-menu profile-menu">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        <img src="assets/imgs/photo-1.jpg"
+                                            class="rounded-circle d-block img-thumbnail profile-avatar"
+                                            width="70" height="70" alt="">
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1 border-bottom pb-3 w-75">
+                                        <span class="spinner-grow spinner-grow-sm text-info" role="status"></span>
+                                        <span class="fw-bold text-primary">متین ملک</span>
+                                    </div>
+
+                                    <div class="card border-0 pb-2" style="width: 18rem;">
+                                        <ul class="nav small flex-column mx-2 my-2">
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link profile-link">
+                                                    <i class="bi bi-person-circle"></i>
+                                                    <span>حساب کاربری</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link profile-link">
+                                                    <i class="bi bi-gear"></i>
+                                                    <span>تنظیمات</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link profile-link">
+                                                    <i class="bi bi-code-slash"></i>
+                                                    <span>پروژه‌ها</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link profile-link">
+                                                    <i class="bi bi-person-fill-add"></i>
+                                                    <span>افزودن حساب</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="close_btn_box my-2">
+                                        <button type="button" class="btn btn-outline-info close_btn d-block w-100 btn-glow">
+                                            <i class="bi bi-box-arrow-right"></i>
+                                            <span>خروج</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ TICKET STATS ============ -->
+            <div class="row my-3 g-3 justify-content-around mx-3">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card stat-card bg-primary bg-opacity-50 mb-3">
+                        <div class="card-body py-2 position-relative">
+                            <span class="card-title small fw-semibold d-block">کل پروژه‌ها</span>
+                            <p class="card-text py-2 fs-3 fw-bolder counter mb-0">20</p>
+                            <span class="stat-icon-wrap">
+                                <i class="bi bi-folder"></i>
+                            </span>
+                        </div>
+                        <div class="card-footer p-0 m-0">
+                            <a href="#" class="icon-link icon-link-hover d-flex align-items-center justify-content-center text-decoration-none text-dark py-2">
+                                <span>مشاهده</span>
+                                <i class="bi bi-arrow-left arrow-anim"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card stat-card bg-success bg-opacity-50 mb-3">
+                        <div class="card-body py-2 position-relative">
+                            <span class="card-title small fw-semibold d-block">در حال انجام</span>
+                            <p class="card-text py-2 fs-3 fw-bolder counter mb-0">15</p>
+                            <span class="stat-icon-wrap">
+                                <i class="bi bi-code-square"></i>
+                            </span>
+                        </div>
+                        <div class="card-footer p-0 m-0">
+                            <a href="#" class="icon-link icon-link-hover d-flex align-items-center justify-content-center text-decoration-none text-dark py-2">
+                                <span>مشاهده</span>
+                                <i class="bi bi-arrow-left arrow-anim"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card stat-card bg-danger bg-opacity-50 mb-3">
+                        <div class="card-body py-2 position-relative">
+                            <span class="card-title small fw-semibold d-block">تکمیل شده</span>
+                            <p class="card-text py-2 fs-3 fw-bolder counter mb-0">12</p>
+                            <span class="stat-icon-wrap">
+                                <i class="bi bi-check2-all"></i>
+                            </span>
+                        </div>
+                        <div class="card-footer p-0 m-0">
+                            <a href="#" class="icon-link icon-link-hover d-flex align-items-center justify-content-center text-decoration-none text-dark py-2">
+                                <span>مشاهده</span>
+                                <i class="bi bi-arrow-left arrow-anim"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card stat-card bg-info bg-opacity-50 mb-3">
+                        <div class="card-body py-2 position-relative">
+                            <span class="card-title small fw-semibold d-block">در انتظار</span>
+                            <p class="card-text py-2 fs-3 fw-bolder counter mb-0">3</p>
+                            <span class="stat-icon-wrap">
+                                <i class="bi bi-hourglass"></i>
+                            </span>
+                        </div>
+                        <div class="card-footer p-0 m-0">
+                            <a href="#" class="icon-link icon-link-hover d-flex align-items-center justify-content-center text-decoration-none text-dark py-2">
+                                <span>مشاهده</span>
+                                <i class="bi bi-arrow-left arrow-anim"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <!-- ============ ACTIVE PROJECTS TABLE ============ -->
+                <div class="col-12">
+                    <div class="card mx-4 card-anim">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold mb-0">پروژه‌های من</p>
+                            <a href="#" class="icon-link-hover small icon-link text-decoration-none view-all">
+                                <span>همه</span>
+                                <i class="bi bi-arrow-left"></i>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive flex-nowrap">
+                                <table class="table align-middle table-hover-anim" style="min-width: 700px;">
+                                    <thead>
+                                        <tr>
+                                            <th>عنوان</th>
+                                            <th>وضعیت</th>
+                                            <th>انجام‌دهنده</th>
+                                            <th>ساعت</th>
+                                            <th>تکنولوژی‌ها</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Row 1: Burger -->
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                                    <img src="assets/imgs/main.jpg" class="rounded-circle flex-shrink-0 avatar-hover" width="50" height="50" alt="">
+                                                    <div class="d-flex flex-column mx-1">
+                                                        <span class="fw-semibold">Burger</span>
+                                                        <span class="small text-secondary">فست فود</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success-subtle px-2 py-1 text-success small badge-anim">انجام شده</span>
+                                            </td>
+                                            <td style="white-space: nowrap;">
+                                                <img class="rounded-circle avatar-hover" width="35" height="35" src="assets/imgs/file_000000005f608230a854db2e1bb0a853.png" alt="">
+                                                <span class="small fw-semibold">متین ملک</span>
+                                            </td>
+                                            <td><span class="small text-secondary">۱۴:۳۰</span></td>
+                                            <td>
+                                                <div class="tech-stack">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" height="30" alt="HTML" title="HTML">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" height="30" alt="CSS" title="CSS">
+                                                    <img src="assets/imgs/javascript-logo-javascript-icon-transparent-free-png.webp" width="40" height="40" alt="JS" title="JavaScript">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="30" height="30" alt="Bootstrap" title="Bootstrap">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Row 2: CARSARA -->
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                                    <img src="assets/imgs/logo.png" class="rounded-circle flex-shrink-0 avatar-hover" width="50" height="50" alt="">
+                                                    <div class="d-flex flex-column mx-1">
+                                                        <span class="fw-semibold">CARSARA</span>
+                                                        <span class="small text-secondary">سرای خودرو</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-warning-subtle px-2 py-1 text-warning small badge-anim">در حال انجام</span>
+                                            </td>
+                                            <td style="white-space: nowrap;">
+                                                <img class="rounded-circle avatar-hover" width="35" height="35" src="assets/imgs/file_000000005f608230a854db2e1bb0a853.png" alt="">
+                                                <span class="small fw-semibold">متین ملک</span>
+                                            </td>
+                                            <td><span class="small text-secondary">۱۶:۰۰</span></td>
+                                            <td>
+                                                <div class="tech-stack">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" height="30" alt="HTML" title="HTML">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" height="30" alt="CSS" title="CSS">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="30" height="30" alt="Bootstrap" title="Bootstrap">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Row 3: QuickShop -->
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                                    <img src="assets/imgs/image.png" class="rounded-circle flex-shrink-0 avatar-hover" width="50" height="50" alt="">
+                                                    <div class="d-flex flex-column mx-1">
+                                                        <span class="fw-semibold">QuickShop</span>
+                                                        <span class="small text-secondary">فروشگاه کفش</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success-subtle px-2 py-1 text-success small badge-anim">انجام شده</span>
+                                            </td>
+                                            <td style="white-space: nowrap;">
+                                                <img class="rounded-circle avatar-hover" width="35" height="35" src="assets/imgs/file_000000005f608230a854db2e1bb0a853.png" alt="">
+                                                <span class="small fw-semibold">متین ملک</span>
+                                            </td>
+                                            <td><span class="small text-secondary">۱۸:۴۵</span></td>
+                                            <td>
+                                                <div class="tech-stack">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" height="30" alt="HTML" title="HTML">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" height="30" alt="CSS" title="CSS">
+                                                    <img src="assets/imgs/javascript-logo-javascript-icon-transparent-free-png.webp" width="40" height="40" alt="JS" title="JavaScript">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="30" height="30" alt="Tailwind" title="Tailwind">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Row 4: Todo List -->
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                                    <img src="assets/imgs/project-1.png" class="rounded-circle flex-shrink-0 avatar-hover" width="50" height="50" alt="">
+                                                    <div class="d-flex flex-column mx-1">
+                                                        <span class="fw-semibold">To Do List</span>
+                                                        <span class="small text-secondary">اپلیکیشن وظایف</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-info-subtle px-2 py-1 text-info small badge-anim">در انتظار</span>
+                                            </td>
+                                            <td style="white-space: nowrap;">
+                                                <img class="rounded-circle avatar-hover" width="35" height="35" src="assets/imgs/file_000000005f608230a854db2e1bb0a853.png" alt="">
+                                                <span class="small fw-semibold">متین ملک</span>
+                                            </td>
+                                            <td><span class="small text-secondary">۲۰:۰۰</span></td>
+                                            <td>
+                                                <div class="tech-stack">
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" alt="React" title="React">
+                                                    <img src="assets/imgs/javascript-logo-javascript-icon-transparent-free-png.webp" width="40" height="40" alt="JS" title="JavaScript">                                                    
+                                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="30" height="30" alt="Tailwind" title="Tailwind">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ DAILY SCHEDULE ============ -->
+                <div class="col-12 col-md-6">
+                    <div class="card p-0 mx-4 card-anim">
+                        <div class="card-header d-flex justify-content-between">
+                            <p class="fw-bold mb-0">برنامه کاری امروز</p>
+                            <a href="#" class="icon-link-hover small icon-link text-decoration-none view-all">
+                                <span>همه</span>
+                                <i class="bi bi-arrow-left"></i>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <ul class="list-unstyled list-activ">
+                                <li class="d-flex pb-3 activity-item">
+                                    <span class="bg-primary-subtle rounded-circle icon-list d-flex justify-content-center align-items-center position-relative icon-pulse">
+                                        <i class="bi bi-chat-dots"></i>
+                                    </span>
+                                    <div class="ms-2">
+                                        <div>
+                                            <span class="fw-bold">۱۴:۰۰ تا ۱۶:۰۰</span>
+                                            <span class="smaller text-secondary">پاسخ‌گویی پیام‌ها</span>
+                                        </div>
+                                        <span class="text-secondary small">چت و تیکت‌های مشتریان</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex pb-3 activity-item">
+                                    <span class="bg-success-subtle rounded-circle icon-list d-flex justify-content-center align-items-center position-relative icon-pulse">
+                                        <i class="bi bi-code-slash"></i>
+                                    </span>
+                                    <div class="ms-2">
+                                        <div>
+                                            <span class="fw-bold">۱۶:۰۰ تا ۱۸:۰۰</span>
+                                            <span class="smaller text-secondary">کدنویسی پروژه</span>
+                                        </div>
+                                        <span class="text-secondary small">ادامه‌ی CARSARA</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex pb-3 activity-item">
+                                    <span class="bg-warning-subtle rounded-circle icon-list d-flex justify-content-center align-items-center position-relative icon-pulse">
+                                        <i class="bi bi-book"></i>
+                                    </span>
+                                    <div class="ms-2">
+                                        <div>
+                                            <span class="fw-bold">۱۸:۰۰ تا ۱۹:۳۰</span>
+                                            <span class="smaller text-secondary">یادگیری</span>
+                                        </div>
+                                        <span class="text-secondary small">React و TypeScript</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex pb-3 activity-item">
+                                    <span class="bg-danger-subtle rounded-circle icon-list d-flex justify-content-center align-items-center position-relative icon-pulse">
+                                        <i class="bi bi-pencil"></i>
+                                    </span>
+                                    <div class="ms-2">
+                                        <div>
+                                            <span class="fw-bold">۲۰:۰۰ تا ۲۱:۰۰</span>
+                                            <span class="smaller text-secondary">سناریونویسی</span>
+                                        </div>
+                                        <span class="text-secondary small">تیم شماتیک</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ MY SKILLS ============ -->
+                <div class="col-12 col-md-6">
+                    <div class="card mx-4 card-anim">
+                        <div class="card-header d-flex justify-content-between">
+                            <p class="fw-bold mb-0">مهارت های من</p>
+                            <a href="#" class="icon-link-hover small icon-link text-decoration-none view-all">
+                                <span>همه</span>
+                                <i class="bi bi-arrow-left"></i>
+                            </a>
+                        </div>
+
+                        <div class="card-body pb-0">
+                            <table class="table align-middle text-nowrap small mb-1">
+                                <thead>
+                                    <tr>
+                                        <th>عنوان</th>
+                                        <th>میزان</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- JavaScript -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="assets/imgs/javascript-logo-javascript-icon-transparent-free-png.webp" width="50" height="50" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">JavaScript</span>
+                                                    <span class="small text-secondary">برنامه نویسی</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 60%">۶۰٪</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Tailwind -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">Tailwind</span>
+                                                    <span class="small text-secondary">فریمورک CSS</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 80%">۸۰٪</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- HTML -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">HTML</span>
+                                                    <span class="small text-secondary">زبان نشانه گذاری</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 90%">90%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- CSS -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">CSS</span>
+                                                    <span class="small text-secondary">استایل دهی</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 85%">۸۵٪</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Bootstrap -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">Bootstrap</span>
+                                                    <span class="small text-secondary">فریمورک CSS</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 90%">۹۰٪</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- React -->
+                                    <tr class="skill-row">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img class="mt-1 skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="">
+                                                <div class="d-flex flex-column">
+                                                    <span class="fw-bold">React</span>
+                                                    <span class="small text-secondary">کتابخانه UI</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="w-50">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 50%">۵۰٪</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ MY TASKS ============ -->
+                <div class="col-12">
+                    <div class="card mx-4 card-anim task-card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold mb-0">وظایف من</p>
+                            <a href="#" class="icon-link-hover small icon-link text-decoration-none view-all">
+                                <span>همه</span>
+                                <i class="bi bi-arrow-left"></i>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <ul class="list-unstyled task-list mb-0">
+                                <li class="task-item d-flex align-items-center justify-content-between pb-3">
+                                    <div class="d-flex align-items-center">
+                                        <span class="task-check bg-success-subtle text-success">
+                                            <i class="bi bi-check-lg"></i>
+                                        </span>
+                                        <div class="ms-2">
+                                            <span class="fw-semibold d-block">تکمیل پروژه‌ی Burger</span>
+                                            <span class="small text-secondary">پروژه‌ی فست فود • امروز</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success task-badge">انجام شده</span>
+                                </li>
+
+                                <li class="task-item d-flex align-items-center justify-content-between pb-3">
+                                    <div class="d-flex align-items-center">
+                                        <span class="task-check bg-warning-subtle text-warning">
+                                            <i class="bi bi-hourglass-split"></i>
+                                        </span>
+                                        <div class="ms-2">
+                                            <span class="fw-semibold d-block">ریسپانسیو کردن CARSARA</span>
+                                            <span class="small text-secondary">پروژه‌ی سرای خودرو • فردا</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-warning-subtle text-warning task-badge">در حال انجام</span>
+                                </li>
+
+                                <li class="task-item d-flex align-items-center justify-content-between pb-3">
+                                    <div class="d-flex align-items-center">
+                                        <span class="task-check bg-danger-subtle text-danger">
+                                            <i class="bi bi-exclamation-lg"></i>
+                                        </span>
+                                        <div class="ms-2">
+                                            <span class="fw-semibold d-block">رفع باگ QuickShop</span>
+                                            <span class="small text-secondary">فروشگاه کفش • ۲ روز آینده</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-danger-subtle text-danger task-badge">فوری</span>
+                                </li>
+
+                                <li class="task-item d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="task-check bg-info-subtle text-info">
+                                            <i class="bi bi-clock"></i>
+                                        </span>
+                                        <div class="ms-2">
+                                            <span class="fw-semibold d-block">شروع پروژه‌ی To Do List با React</span>
+                                            <span class="small text-secondary">پروژه‌ی شخصی • هفته آینده</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-info-subtle text-info task-badge">در انتظار</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ============ FOOTER ============ -->
+            <footer class="dashboard-footer mt-4 mx-3">
+                <div class="row align-items-center gy-3">
+
+                    <div class="col-12 col-md-6 text-center text-md-start">
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                            <i class="bi bi-code-slash text-info fs-4 footer-icon"></i>
+                            <span class="fw-bold">داشبورد متین ملک</span>
+                        </div>
+                        <p class="small text-secondary mb-0 mt-1">
+                            © ۱۴۰۴ — تمامی حقوق محفوظ است.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ul class="nav justify-content-center justify-content-md-end gap-3">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link footer-link p-0">درباره من</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link footer-link p-0">پشتیبانی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link footer-link p-0">قوانین</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link footer-link p-0">تماس با من</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-center justify-content-md-end gap-2 mt-2">
+                            <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="footer-social"><i class="bi bi-telegram"></i></a>
+                            <a href="#" class="footer-social"><i class="bi bi-github"></i></a>
+                            <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+</div>
+
+<script>
+    /* ========== THEME SWITCHER ========== */
+    const darkBtn  = document.querySelector('.dark_btn');
+    const lightBtn = document.querySelector('.light_btn');
+    const body     = document.querySelector('body');
+
+    darkBtn.addEventListener('click', () => {
+        body.setAttribute('data-bs-theme', 'dark');
+        darkBtn.classList.add('active');
+        lightBtn.classList.remove('active');
+    });
+
+    lightBtn.addEventListener('click', () => {
+        body.setAttribute('data-bs-theme', 'light');
+        darkBtn.classList.remove('active');
+        lightBtn.classList.add('active');
+    });
+
+    /* ========== SCROLL REVEAL ========== */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card-anim, .stat-card, .task-card').forEach(el => {
+        el.classList.add('reveal-init');
+        revealObserver.observe(el);
+    });
+
+    /* ========== COUNTER ANIMATION ========== */
+    document.querySelectorAll('.counter').forEach(counter => {
+        const target = +counter.innerText;
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.innerText = target;
+                clearInterval(timer);
+            } else {
+                counter.innerText = current;
+            }
+        }, 25);
+    });
+</script>
+</body>
+</html>
